@@ -1,6 +1,3 @@
-**`README.md`**
-
-```markdown
 # Concatenate Files CLI
 
 A CLI tool to concatenate text files from a folder into a single markdown file with stylish dividers.
