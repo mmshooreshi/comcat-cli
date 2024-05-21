@@ -5,7 +5,7 @@ A CLI tool to concatenate text files from a folder into a single markdown file w
 ## Installation
 
 ```sh
-pip install git+https://github.com/yourusername/comcat-cli.git
+pip install git+https://github.com/mmshooreshi/comcat-cli.git
 ```
 
 ## Usage

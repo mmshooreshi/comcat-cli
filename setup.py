@@ -17,7 +17,7 @@ setup(
     description="A CLI tool to concatenate text files from a folder into a single markdown file with stylish dividers.",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url="https://github.com/yourusername/comcat-cli",
+    url="https://github.com/mmshooreshi/comcat-cli",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
