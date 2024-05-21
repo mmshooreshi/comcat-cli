@@ -1,0 +1,3 @@
+[console_scripts]
+2gpt = comcat.gpt_request:main
+comcat = comcat.cli:main

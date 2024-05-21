@@ -7,13 +7,14 @@ setup(
     entry_points={
         'console_scripts': [
             'comcat=comcat.cli:main',
+            '2gpt=comcat.gpt_request:main',
         ],
     },
     install_requires=[
-        # List dependencies here, if any
+        'openai',
     ],
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="mmshooreshi",
+    author_email="mmshooreshi@gmail.com",
     description="A CLI tool to concatenate text files from a folder into a single markdown file with stylish dividers.",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

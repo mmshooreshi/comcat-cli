@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+comcat/__init__.py
+comcat/cli.py
+comcat/gpt_request.py
+comcat_cli.egg-info/PKG-INFO
+comcat_cli.egg-info/SOURCES.txt
+comcat_cli.egg-info/dependency_links.txt
+comcat_cli.egg-info/entry_points.txt
+comcat_cli.egg-info/requires.txt
+comcat_cli.egg-info/top_level.txt
