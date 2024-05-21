@@ -1,7 +1,6 @@
 import os
 import sys
 import openai
-import argparse
 from dotenv import load_dotenv
 
 def send_to_gpt(input_text):
@@ -9,6 +8,9 @@ def send_to_gpt(input_text):
 
     api_base = os.getenv("OPENAI_API_BASE")
     api_key = os.getenv("OPENAI_API_KEY")
+
+    if not api_base or not api_key:
+        return "Environment variables OPENAI_API_BASE and OPENAI_API_KEY must be set."
 
     openai.api_base = api_base
     openai.api_key = api_key
@@ -27,9 +29,6 @@ def send_to_gpt(input_text):
         return f"An error occurred: {e}"
 
 def main():
-    parser = argparse.ArgumentParser(description="Send input text to GPT-4 API and print the response.")
-    args = parser.parse_args()
-    
     input_text = sys.stdin.read()
     response = send_to_gpt(input_text)
     print(response)
