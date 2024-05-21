@@ -6,10 +6,14 @@ def read_files_recursively(folder_path):
     for root, _, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                relative_path = os.path.relpath(file_path, folder_path)
-                file_contents.append((relative_path, content))
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+            except UnicodeDecodeError:
+                with open(file_path, 'r', encoding='latin-1') as f:
+                    content = f.read()
+            relative_path = os.path.relpath(file_path, folder_path)
+            file_contents.append((relative_path, content))
     return file_contents
 
 def generate_divider(title):
@@ -25,7 +29,7 @@ def concatenate_contents(file_contents):
     concatenated_text = ""
     for file_path, content in file_contents:
         divider = generate_divider(file_path)
-        concatenated_text += f"{divider}\n\n\n"
+        concatenated_text += f"{divider}\n\n```\n{content}\n```\n"
     return concatenated_text
 
 def write_output_file(output_path, concatenated_text):
