@@ -12,8 +12,9 @@ setup(
     },
     install_requires=[
         'openai',
+        'python-dotenv',
     ],
-    author="mmshooreshi",
+    author="mamthenebo",
     author_email="mmshooreshi@gmail.com",
     description="A CLI tool to concatenate text files from a folder into a single markdown file with stylish dividers.",
     long_description=open('README.md').read(),

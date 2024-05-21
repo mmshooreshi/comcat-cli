@@ -3,8 +3,8 @@ Name: comcat-cli
 Version: 0.1.0
 Summary: A CLI tool to concatenate text files from a folder into a single markdown file with stylish dividers.
 Home-page: https://github.com/mmshooreshi/comcat-cli
-Author: Your Name
-Author-email: your.email@example.com
+Author: mamthenebo
+Author-email: mmshooreshi@gmail.com
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -12,6 +12,7 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: openai
+Requires-Dist: python-dotenv
 
 **`README.md`**
 

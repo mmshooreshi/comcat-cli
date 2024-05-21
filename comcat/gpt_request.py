@@ -2,13 +2,19 @@ import os
 import sys
 import openai
 import argparse
+from dotenv import load_dotenv
 
-def send_to_gpt(api_base, api_key, input_text):
+def send_to_gpt(input_text):
+    load_dotenv()
+
+    api_base = os.getenv("OPENAI_API_BASE")
+    api_key = os.getenv("OPENAI_API_KEY")
+
     openai.api_base = api_base
     openai.api_key = api_key
 
     try:
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
@@ -22,13 +28,10 @@ def send_to_gpt(api_base, api_key, input_text):
 
 def main():
     parser = argparse.ArgumentParser(description="Send input text to GPT-4 API and print the response.")
-    parser.add_argument("--api_base", required=True, help="The base URL of the GPT-4 API.")
-    parser.add_argument("--api_key", required=True, help="Your API key for the GPT-4 API.")
-    
     args = parser.parse_args()
     
     input_text = sys.stdin.read()
-    response = send_to_gpt(args.api_base, args.api_key, input_text)
+    response = send_to_gpt(input_text)
     print(response)
 
 if __name__ == "__main__":
