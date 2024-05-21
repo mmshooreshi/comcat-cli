@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 def send_to_gpt(input_text):
     load_dotenv()
 
-    api_base = os.getenv("OPENAI_API_BASE")
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_base = os.environ.get("OPENAI_API_BASE")
+    api_key = os.environ.get("OPENAI_API_KEY")
 
     if not api_base or not api_key:
         return "Environment variables OPENAI_API_BASE and OPENAI_API_KEY must be set."
