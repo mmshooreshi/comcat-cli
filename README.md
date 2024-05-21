@@ -1,4 +1,3 @@
-```markdown
 # ⚡️ Supercharged Pinksale Scraper ⚡️
 
 Welcome to the **Ultimate Pinksale Scraper**. 🚀
@@ -114,4 +113,3 @@ Released under [CC0 License](LICENSE).
 ---
 
 Feel free to reach out for any questions or suggestions!
-```
